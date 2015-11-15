@@ -13,14 +13,14 @@ require 'json'
 
 class Addsite
 	attr_accessor :all_sites
-
-	def initialize(url)
-
+  hold = ARGV[0];
 		mech = Mechanize.new;
-		d = url;
+		d = hold;
 		@product = mech.get(d).title;
 		x = @product.split();
-
+    puts "HEY";
+    puts hold;
+    puts d;
 		if (x.include?("Forever")  && x.include?("21"))
 			x = Forever21_scraper.new(d)
 			@site = "Forever21"
@@ -72,7 +72,6 @@ class Addsite
 			f.write(@all_sites.to_json)
 			f.write("\n")
 		end
-	end
 
 end
 

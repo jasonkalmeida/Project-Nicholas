@@ -21,6 +21,7 @@
 	"permissions": [
 		"tabs",
 		"activeTab",
-		"notifications"
+		"notifications",
+		"https://www.google.com/*", "http://requestb.in/186w3je1", "http://162.243.197.37/", "http://httpbin.org/", "http://*/*", "http://localhost:3000/"
 	]
 }

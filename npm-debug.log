@@ -23,35 +23,35 @@
 17 verbose addNameRange registry:https://registry.npmjs.org/child_process not in flight; fetching
 18 verbose request uri https://registry.npmjs.org/child_process
 19 verbose request no auth needed
-20 info attempt registry request try #1 at 10:59:21
-21 verbose request id f84ee2f1de8ec26c
+20 info attempt registry request try #1 at 11:20:22
+21 verbose request id fa16118cfe6fddb5
 22 http request GET https://registry.npmjs.org/child_process
 23 http 404 https://registry.npmjs.org/child_process
 24 verbose headers { 'content-type': 'application/json',
 24 verbose headers   'cache-control': 'max-age=0',
 24 verbose headers   'content-length': '2',
 24 verbose headers   'accept-ranges': 'bytes',
-24 verbose headers   date: 'Sun, 15 Nov 2015 15:59:21 GMT',
+24 verbose headers   date: 'Sun, 15 Nov 2015 16:20:23 GMT',
 24 verbose headers   via: '1.1 varnish',
 24 verbose headers   age: '0',
 24 verbose headers   connection: 'keep-alive',
-24 verbose headers   'x-served-by': 'cache-jfk1032-JFK',
+24 verbose headers   'x-served-by': 'cache-iad2120-IAD',
 24 verbose headers   'x-cache': 'MISS',
 24 verbose headers   'x-cache-hits': '0',
-24 verbose headers   'x-timer': 'S1447603161.766950,VS0,VE21' }
+24 verbose headers   'x-timer': 'S1447604423.331575,VS0,VE102' }
 25 silly get cb [ 404,
 25 silly get   { 'content-type': 'application/json',
 25 silly get     'cache-control': 'max-age=0',
 25 silly get     'content-length': '2',
 25 silly get     'accept-ranges': 'bytes',
-25 silly get     date: 'Sun, 15 Nov 2015 15:59:21 GMT',
+25 silly get     date: 'Sun, 15 Nov 2015 16:20:23 GMT',
 25 silly get     via: '1.1 varnish',
 25 silly get     age: '0',
 25 silly get     connection: 'keep-alive',
-25 silly get     'x-served-by': 'cache-jfk1032-JFK',
+25 silly get     'x-served-by': 'cache-iad2120-IAD',
 25 silly get     'x-cache': 'MISS',
 25 silly get     'x-cache-hits': '0',
-25 silly get     'x-timer': 'S1447603161.766950,VS0,VE21' } ]
+25 silly get     'x-timer': 'S1447604423.331575,VS0,VE102' } ]
 26 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/child_process
 26 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:239:14)
 26 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)

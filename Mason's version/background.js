@@ -10,7 +10,6 @@ chrome.browserAction.onClicked.addListener(function(tab){
 			message: "We'll let you know if the price drops!",
 			iconUrl: "icon3.png"
 		}
-		alert(opt.iconUrl);
 		chrome.notifications.create(opt);
 	});
 });

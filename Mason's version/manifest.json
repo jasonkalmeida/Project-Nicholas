@@ -10,12 +10,12 @@
 	},
 
 	"browser_action":{
-		"default_icon": "icon.png",
+		"default_icon": "shirt.png",
 		"default_title": "Bookmark Product"
 	},
 
 	"web_accessible_resources":[
-		"icon2.png"
+		"icon3.png"
 	],
 
 	"permissions": [

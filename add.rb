@@ -13,7 +13,7 @@ require 'json'
 
 class Addsite
 	attr_accessor :all_sites
-  hold = 'http://www.hm.com/us/product/01111?article=01111-A';
+  hold = ARGV[0];
 		mech = Mechanize.new;
 		d = hold;
 		@product = mech.get(d).title;

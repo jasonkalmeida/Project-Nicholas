@@ -32,6 +32,13 @@ app.post('/', function(req, res) {
 	console.log('Got post test!');	
     var name = req.body;
 	console.log(name.foo);
+	
+	var exec = require("child_process").exec;
+
+	exec('ruby add.rb ' + name.foo, function (err, stdout, stderr) {
+	    console.log(stdout);
+	});
+	
 	/*req.on('data', function(chunk) {
 	      console.log("Received body data:");
 	      console.log(chunk.toString());

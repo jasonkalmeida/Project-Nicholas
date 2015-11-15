@@ -10,6 +10,12 @@ data_hash = JSON.parse(file)
 
 y =  data_hash["employees"]
 
+File.open("deal.json","a") do |f|
+	f.write('{"employees":[ ')
+	f.write("\n")
+end
+
+happened = nil;
 
 y.each do |entry| 
 	current_price =  entry["price"]
@@ -45,13 +51,33 @@ y.each do |entry|
 		x = Tobi_scraper.new(d)
 		check_price = x.price
 	else "Incorrect Something"
-	
+
 	end
 	if(check_price < current_price)
-			puts "DEAL!"
+		args = {
+			:site => website,
+			:product => entry["product"],
+			:price => check_price,
+			:url => d
+		}
+		
+		all_sites = args;
+		puts "DEAL!"
+		#need to format file
+		File.open("deal.json","a") do |f|
+			if(happened)
+				f.write(",")
+			end
+				f.write(all_sites.to_json)
+				f.write("\n")
+		end
+		happened = true;
+		
 		else
 			puts "Same price or greater"
 		end
-
-
 end
+File.open("deal.json","a") do |f|
+	f.write("]}")
+end
+

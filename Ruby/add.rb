@@ -72,6 +72,7 @@ class Addsite
 		}
 		@all_sites = args;
 		File.open("to.json","a") do |f|
+			f.write(",")
 			f.write(@all_sites.to_json)
 			f.write("\n")
 		end

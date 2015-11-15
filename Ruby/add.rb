@@ -1,3 +1,6 @@
+#to.ruby must start with {"employees" :[  and contain one tuple!
+
+
 require_relative 'Amazon'
 require_relative 'Forever21'
 require_relative 'Hm'
@@ -18,14 +21,7 @@ class Addsite
 		@product = mech.get(d).title;
 		x = @product.split();
 
-		if( x.include?("Amazon.com"))
-			x = Amazon_scraper.new(d)
-			@site = "Amazon.com"
-			@price = x.price
-			
-			#puts "Amazon: #{x.price}"
-
-		elsif (x.include?("Forever")  && x.include?("21"))
+		if (x.include?("Forever")  && x.include?("21"))
 			x = Forever21_scraper.new(d)
 			@site = "Forever21"
 			@price = x.price
@@ -72,6 +68,7 @@ class Addsite
 		}
 		@all_sites = args;
 		File.open("to.json","a") do |f|
+			f.write(",")
 			f.write(@all_sites.to_json)
 			f.write("\n")
 		end
